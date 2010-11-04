@@ -1,0 +1,173 @@
+snippet chapter
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE chapter SYSTEM "local/xml/markup.dtd">
+	<chapter id="chp.${1:`substitute(Filename('', 'ChapterId'), '^.', '\u&', '')`}">
+		<title>${2}</title>
+	
+	  <p>
+	
+	   ${3} 
+	
+	  </p>
+	
+	  
+	</chapter>
+
+snippet pref
+	<pref linkend="${1}"/>
+
+snippet sec
+	<sect${1:1}>
+		<title>${2}</title>
+		<p>
+			
+			${3}
+	  
+		</p>
+	</sect$1>
+
+snippet seci
+	<sect${1:1} id="${2}">
+		<title>${3}</title>
+		<p>
+			
+			${4}
+	  
+		</p>
+	</sect$1>
+
+snippet p
+	<p>
+		
+		${1}
+	
+	</p>
+
+snippet footnote
+	<footnote>
+		<p>
+
+			${1}
+
+		</p>
+	</footnote>
+
+snippet epigraph
+	<epigraph>
+		<name>${1}</name>
+		<epitext>
+			${2}
+		</epitext>
+	</epigraph>
+	
+snippet bq
+	<blockquote>
+		<p>	
+
+			${1}
+
+		</p>
+	</blockquote>
+
+snippet sb
+	<sidebar id="sb.${1}">
+		<title>${2}</title>
+		<p>
+
+			${3}
+
+		</p>
+	</sidebar>
+
+snippet hl
+	<highlight>
+		<p>
+			
+			${1}
+
+		</p>
+	</higlight>
+
+snippet img
+	<figure id="fig.${1}">
+		<title>${2}</title>
+		<imagedata fileref="${3:imagePath}" width="${4:natural}" scale="${5:1.0}" center="${6:yes}"/>
+	</figure>
+
+snippet var
+	<variablename>${1:variableName}</variablename>
+
+snippet class
+	<classname>${1:className}</classname>
+
+snippet m
+	<methodname>${1:methodName}</methodname>
+
+snippet ma
+	<methodname args="${2:}">${1:methodName}</methodname>
+
+snippet om
+	<objcmethodname>${1:methodName}</objcmethodname>
+
+snippet oma
+	<objcmethodname args="${2:}">${1:methodName}</objcmethodname>
+
+snippet em
+	<emph>${1}</emph>
+
+snippet const
+	<constant>${1:constant}</constant>
+
+snippet kw
+	<keyword>${1}</keyword>
+
+snippet elide
+	<elide>${1}</elide>
+
+snippet lelide
+	<literal:elide>${1}</literal:elide>
+
+snippet fname
+	<filename>${1:fileName}</filename>
+
+snippet frac
+	<fraction>
+		<whole>${1}</whole>
+		<top>${2}</top>
+		<bottom>${3}</bottom>
+	</fraction>
+
+snippet pow
+	<raise power="${2}">${1:term}</raise>
+
+snippet low
+	<lower subscript="${2}">${1:term}</lower>
+
+snippet a
+	<author>${1:message}</author>
+
+snippet aq
+	<authorq>${1:question}</authorq>
+
+snippet miss
+	<missing>${1:message}</missing>
+
+snippet code
+	<code language="${1:lang}">
+		${2}
+	</code>
+
+snippet cfile
+	<code file="${1:filename}"/>
+
+snippet cpart
+	<code file="${1:filename}" part="${2:partId}"/>
+
+snippet cpat
+	<code file="${1:filename}" start="${2:startPattern} end="${3:endPattern}"/>
+
+snippet ic
+	<inlinecode>${1:code}</inlinecode>
+
+snippet cref
+	<cref linkend="${1}"/>
