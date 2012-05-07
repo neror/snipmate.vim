@@ -129,6 +129,8 @@ fun! GetSnippets(dir, filetypes)
 			call s:DefineSnips(a:dir, 'c', ft)
 		elseif ft == 'xhtml'
 			call s:DefineSnips(a:dir, 'html', 'xhtml')
+		elseif ft == 'mmd'
+			call s:DefineSnips(a:dir, 'markdown', 'markdown')
 		endif
 		let g:did_ft[ft] = 1
 	endfor
